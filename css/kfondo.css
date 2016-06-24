@@ -1,0 +1,29 @@
+body { /* esta linea indca que cambiamos el estilo al body */
+
+    padding-left: 11em; /*sangria*/
+    font-family: 'Montserrat', sans-serif;
+          Times, serif;/* cambia el color del letra*/
+    color: #fcffed; /* cambia el color del texto*/
+    background-image: url('../img/kfondo.jpg'); /*color de fondo en exadecimal */
+
+    background-repeat: repeat-y;
+}
+
+a {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 0px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: rgb(50,50,50); opacity: 0.5;
+  padding: 10px 25px 10px 25px;
+  border: solid #ffffff 2px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgb(0,0,0); opacity: 0.1;
+  padding: 10px 25px 10px 25px;
+  border: solid #ffffff 2px;
+}
