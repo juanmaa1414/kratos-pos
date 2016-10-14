@@ -2,8 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <link link rel="shortcut icon" type="image/png" href="kratosimg\icon6464.png"/>
+        <title>Kratos-Pos</title>
         <link rel="stylesheet" href="css/estilos.css"/>
+        
 
     </head>
 

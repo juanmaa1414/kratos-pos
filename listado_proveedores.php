@@ -5,18 +5,19 @@ include "conexion_bd.php";
 ?>
 
 <?php
-$sql_cli = "SELECT
-            cli_apellido,
-            cli_nombre,
-            cli_dni,
-            cli_direccion,
-            cli_telefono,
-            cli_id_localidad,
-            cli_email
-            FROM clientes";
-        /*WHERE cli_eliminado = 0*/
+$sql_pro = "SELECT
+            pro_nombre_rsocial,
+            pro_id_tipo_doc,
+            pro_nro_doc,
+            pro_direccion,
+            pro_id_tipo_contrib,
+            pro_telefono,
+            pro_id_localidad,
+            pro_id_provincia,
+            pro_email
+            FROM proveedores";
 
-$query_cli = $bd->query($sql_cli);
+$query_pro = $bd->query($sql_pro);
 ?>
 
 <?php
@@ -25,38 +26,40 @@ include "parte-superior.php";
 
 <div id="contenido">
     <div class="titulo-secc">
-        <h2 class="god">Listado de clientes</h2>
+        <h2 class="god">Listado de proveedores</h2>
     </div>
     <div class="lista-opc">
-        <a class="lista-opc-item" href="nuevo_cliente.php">
+        <a class="lista-opc-item" href="nuevo_proveedor.php">
             <img src="img/icons/plus.png" width="30">
             <br>
             Nuevo
         </a>
     </div>
-    <?php if ($query_cli->num_rows >= 1): ?>
+    <?php if ($query_pro->num_rows >= 1): ?>
         <table border="1" cellspacing="0" width="100%">
             <thead>
                 <tr>
-                    <th>Ap. y nombre</th>
-                    <th>Documento</th>
-                    <th>Id localidad</th>
-                    <th>N° telefono</th>
+                    <th>Nombre proveedor</th>
+                    <th>N° Documento</th>
                     <th>Direccion</th>
+                    <th>Id tipo contr.</th>
+                    <th>N° telefono</th>
+                    <th>Id localidad</th>
                     <th>E-mail</th>
                     <th colspan="2">Opción</th>
                 </tr>
             </thead>
             <tbody>
 
-            <?php while($cli = $query_cli->fetch_object()): ?>
+            <?php while($pro = $query_pro->fetch_object()): ?>
                 <tr>
-                    <td><?= $cli->cli_apellido . ', ' . $cli->cli_nombre ?></td>
-                    <td><?= $cli->cli_dni ?></td>
-                    <td><?= $cli->cli_id_localidad/*prov_nombre*/ ?></td>
-                    <td><?= $cli->cli_telefono ?></td>
-                    <td><?= $cli->cli_direccion ?></td>
-                    <td><?= $cli->cli_email ?></td>
+                    <td><?= $pro->pro_nombre_rsocial ?></td>
+                    <td><?= $pro->pro_nro_doc ?></td>
+                    <td><?= $pro->pro_direccion ?></td>
+                    <td><?= $pro->pro_id_tipo_contrib ?></td>
+                    <td><?= $pro->pro_telefono ?></td>
+                    <td><?= $pro->pro_id_localidad ?></td>
+                    <td><?= $pro->pro_email ?></td>
                     <td>
                         <a href="#" title="Modificar">
                             <img src="img/icons/new-reg.png" width="18">

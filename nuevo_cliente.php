@@ -16,8 +16,7 @@ if ($_POST) {
     $cli_telefono = $bd->real_escape_string($_POST["cli_telefono"]);
      $cli_id_localidad = $bd->real_escape_string($_POST["cli_id_localidad"]);
       $cli_email = $bd->real_escape_string($_POST["cli_email"]);
-    //$alu_fecha_alta = date("Y-m-d");
-
+    
     $sql_cli = "INSERT INTO clientes (
                     cli_apellido,
                     cli_nombre,
