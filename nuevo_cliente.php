@@ -85,7 +85,7 @@ $query_loc = $bd->query($sql_loc);
         <label for="cli_nombre">Nombre:</label>
         <input name="cli_nombre" id="cli_nombre" type="text">
         <br><br>
-        <!--<label for="cli_id_tipo_doc">Tipo documento:</label>
+        <label for="cli_id_tipo_doc">Tipo documento:</label>
         <select name="cli_id_tipo_doc">
             <option value="">elegir...</option>
             <?php while($tdoc = $query_tdoc->fetch_object()): ?>
@@ -94,7 +94,7 @@ $query_loc = $bd->query($sql_loc);
                 </option>
             <?php endwhile; ?>
         </select>
-        <br><br>-->
+        <br><br>
         <label for="cli_dni">Doc./clave:</label>
         <input name="cli_dni" id="cli_dni" type="number">
         <br><br>

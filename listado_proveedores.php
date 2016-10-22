@@ -12,10 +12,10 @@ $sql_pro = "SELECT
             pro_direccion,
             pro_id_tipo_contrib,
             pro_telefono,
-            pro_id_localidad,
+            loc_nombre,
             pro_id_provincia,
             pro_email
-            FROM proveedores";
+            FROM proveedores INNER JOIN localidades ON (loc_id=pro_id_localidad)";
 
 $query_pro = $bd->query($sql_pro);
 ?>
@@ -58,7 +58,7 @@ include "parte-superior.php";
                     <td><?= $pro->pro_direccion ?></td>
                     <td><?= $pro->pro_id_tipo_contrib ?></td>
                     <td><?= $pro->pro_telefono ?></td>
-                    <td><?= $pro->pro_id_localidad ?></td>
+                    <td><?= $pro->loc_nombre ?></td>
                     <td><?= $pro->pro_email ?></td>
                     <td>
                         <a href="#" title="Modificar">
