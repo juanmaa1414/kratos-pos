@@ -31,7 +31,7 @@
                         <ul>
                             <li><a href="nueva_provincia.php">Provincias</a></li>
                             <li><a href="nueva_localidad.php">Localidades</a></li>
-                            <li><a href="nuava_flia_articulo.php">Familia de articulos</a></li>
+                            <li><a href="listado_flia_articulos.php">Familia de articulos</a></li>
                 		</ul>
                 </li>
                 <li><a href="listado_articulos.php">Articulos</a>
