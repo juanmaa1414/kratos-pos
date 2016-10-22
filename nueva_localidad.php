@@ -9,9 +9,9 @@ include "conexion_bd.php";
             ##################################################
 if ($_POST) {
     // Guardamos valores de inputs con escape de caracteres raros y/o sospechosos.
-    
+
     $loc_nombre = $bd->real_escape_string($_POST["loc_nombre"]);
-    
+    // Nos olvidamos de valores y caracteres raros y/o sospechosos. Previene de un ataque.
     $sql_loc = "INSERT INTO localidades (
     loc_nombre)
     VALUES (
@@ -53,7 +53,7 @@ include "parte-superior.php";
         <input name="loc_nombre" id="loc_nombre" type="text">
         <br><br>
         <input type="submit" name="formulario" value="Enviar">
-        
+
     </form>
 </div>
 
