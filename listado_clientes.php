@@ -5,7 +5,7 @@ include "conexion_bd.php";
 ?>
 
 <?php
-$sql_cli = "SELECT
+/*$sql_cli = "SELECT
             cli_apellido,
             cli_nombre,
             cli_dni,
@@ -13,7 +13,8 @@ $sql_cli = "SELECT
             cli_telefono,
             cli_id_localidad,
             cli_email
-            FROM clientes";
+            FROM clientes";*/
+$sql_cli = "SELECT cli_apellido, cli_nombre, cli_dni, cli_direccion, cli_telefono, loc_nombre, cli_email FROM clientes INNER JOIN localidades on (loc_id=cli_id_localidad)";
         /*WHERE cli_eliminado = 0*/
 
 $query_cli = $bd->query($sql_cli);
@@ -40,7 +41,7 @@ include "parte-superior.php";
                 <tr>
                     <th>Ap. y nombre</th>
                     <th>Documento</th>
-                    <th>Id localidad</th>
+                    <th>Localidad</th>
                     <th>N° telefono</th>
                     <th>Direccion</th>
                     <th>E-mail</th>
@@ -53,7 +54,7 @@ include "parte-superior.php";
                 <tr>
                     <td><?= $cli->cli_apellido . ', ' . $cli->cli_nombre ?></td>
                     <td><?= $cli->cli_dni ?></td>
-                    <td><?= $cli->cli_id_localidad/*prov_nombre*/ ?></td>
+                    <td><?= $cli->loc_nombre/*prov_nombre*/ ?></td>
                     <td><?= $cli->cli_telefono ?></td>
                     <td><?= $cli->cli_direccion ?></td>
                     <td><?= $cli->cli_email ?></td>

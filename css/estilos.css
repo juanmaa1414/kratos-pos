@@ -4,23 +4,19 @@ body { /* esta linea indca que cambiamos el estilo al body directamente */
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 /* Fondo blanco que contiene a los formularios y listas. */
 #contenido {
     padding-left: 10px;
     padding-top: 5px;
     background-color: RGBA(255, 255, 255, 0.49);
 }
-
 .titulo-secc {
     float: left;
 }
-
 /* Caja de controles de la izquierda de las pag (nuevo cliente, prov, etc.) */
 .lista-opc {
     float: right;
 }
-
 .lista-opc-item {
     text-align: center;
     padding: 5px;
@@ -30,7 +26,6 @@ body { /* esta linea indca que cambiamos el estilo al body directamente */
     font-weight: bold;
     min-width: 70px;
 }
-
 /* Elementos input de enviar, y además, elementos boton. (son casi lo mismo). */
 input[type=submit], button {
     background-color: rgb(255, 51, 51);
@@ -40,53 +35,43 @@ input[type=submit], button {
     border: 1px solid rgb(0, 0, 0);
     cursor: pointer;
 }
-
 label {
     cursor: pointer;
     min-width: 172px;
     display: inline-block;
 }
-
 input, select {
     width: 150px;
 }
-
-
 /* Se define "clase" css (por eso comienza con punto) que da estilo al encabezado principal. */
 .header-div {
     text-align: center;
     border: 1px dotted rgb(0, 0, 0);
     background-color: #150000;
 }
-
 .main-header {
     text-shadow: px 3px 3px green;
     color: red;
 }
-
 /* Definimos regla de font. */
 @font-face {
     font-family: 'godofwar';
     src: url('../assets/GODOFWAR.ttf');
 }
-
 .god {
     font-family: 'godofwar'; /* Aplicamos el font que definimos. */
 }
-
 #menu-principal {
     margin-top: 0px;
     padding-left: 0px;
 }
-
 /* Estilo para cada item de la lista (li) del menu. */
 #menu-principal > li {
     display: inline-block;
 }
-
 /* Estilo para cada enlace (a) que se encuentre dentro del menu. */
 /* WALLY STYLE... */
-#menu-principal > li > a {
+#menu-principal  li  a {
     display: block;
     text-align: center;
     padding: 10px;
@@ -100,9 +85,51 @@ input, select {
     border: solid #FFFFFF 2px;
     transition: opacity 0.3s ease-out; /* Efecto que elegimos para el hover. */
 }
-
 /* Alteraciones que se efectúan cuando hay un mouse apuntando. */
-#menu-principal > li > a:hover {
+#menu-principal  li  a:hover {
     opacity: 1;
     border: solid red 2px;
 }
+/*.nav li ul {
+                display:none;
+                position:absolute;
+                min-width:140px;
+}*/
+#menu-principal li ul {
+                display:none;
+                position:absolute;
+                min-width:140px;
+}
+#menu-principal li:hover > ul {
+    display:block;
+    text-align: center;
+    padding: 0px;
+    margin-left: 5px;
+    width: 155px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFF;
+    /*background-color: rgb(50,50,50);*/
+    transition: opacity 0.3s ease-out;
+}
+#menu-principal li:hover > ul a {
+    color: rgb(255,255,255);
+}
+/*#menu-principal li ul li{
+    position: relative;
+}
+#menu-principal li ul li ul{
+    right: -150px;
+    top: 1px;
+}
+/*#menu-principal  li a {
+    display: block;
+    padding: 10px;
+    margin-left: 5px;
+    width: 130px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFF;
+    border: solid #FFFFFF 1px;
+    transition: opacity 0.3s ease-out; /* Efecto que elegimos para el hover. 
+}*/

@@ -27,5 +27,11 @@
                 <li>
                     <a href="listado_proveedores.php">Proveedores</a>
                 </li>
+                <li><a href="">Altas</a>
+                        <ul>
+                            <li><a href="nueva_provincia.php">Provincias</a></li>
+                            <li><a href="">Localidades</a></li>
+                		</ul>
+                </li>
             </ul>
         </nav>
