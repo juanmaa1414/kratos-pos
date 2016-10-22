@@ -30,7 +30,7 @@
                 <li><a href="">Altas</a>
                         <ul>
                             <li><a href="nueva_provincia.php">Provincias</a></li>
-                            <li><a href="">Localidades</a></li>
+                            <li><a href="nueva_localidad.php">Localidades</a></li>
                 		</ul>
                 </li>
             </ul>
