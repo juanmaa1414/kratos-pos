@@ -27,11 +27,11 @@
                 <li>
                     <a href="listado_proveedores.php">Proveedores</a>
                 </li>
-                <li>
-                    <a href="nueva_provincia.php">Alta Provincias</a>
-                </li>
-                <li>
-                    <a href="nueva_localidad.php">Alta Localidad</a>
+                <li><a href="">Altas</a>
+                        <ul>
+                            <li><a href="nueva_provincia.php">Provincias</a></li>
+                            <li><a href="nueva_localidad.php">Localidades</a></li>
+                		</ul>
                 </li>
             </ul>
         </nav>
