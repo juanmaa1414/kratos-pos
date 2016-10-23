@@ -20,7 +20,7 @@ if ($_POST) {
 
     $insert_prov = $bd->query($sql_prov);
     if ( ! $insert_prov) {
-        $msg = "Ocurrió un error al intentar guardar: " . $bd->error;
+        $msg = "Ocurrió un error al intentar guardar.";
     } else {
         $msg = "El registro fué completado con éxito.";
     }
@@ -28,10 +28,10 @@ if ($_POST) {
     // Dirigimos al usuario a seguir cargando.
     // Además al redirigir de esta forma, evitamos que el
     // navegador pueda preguntar si volver a enviar el formulario.
-    echo "<script>
-            alert('" . addslashes($msg) . "');
-            location.href = 'nueva_provincia.php';
-        </script>";
+    echo '<script>
+            alert("' . $msg . '");
+            location.href = "nueva_provincia.php";
+            </script>';
 
     // Una vez que hicimos "echo" de la redirección con JS, detenemos
     // toda la ejecución de éste archivo php.

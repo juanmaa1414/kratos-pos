@@ -40,7 +40,7 @@ exit;*/
 
     $insert_cli = $bd->query($sql_cli);
     if ( ! $insert_cli) {
-        $msg = "Ocurrió un error al intentar guardar: " . $bd->error;
+        $msg = "Ocurrió un error al intentar guardar.";
     } else {
         $msg = "El registro fué completado con éxito.";
     }
@@ -48,10 +48,10 @@ exit;*/
     // Dirigimos al usuario a seguir cargando.
     // Además al redirigir de esta forma, evitamos que el
     // navegador pueda preguntar si volver a enviar el formulario.
-    echo "<script>
-            alert('" . addslashes($msg) . "');
-            location.href = 'nuevo_cliente.php';
-        </script>";
+    echo '<script>
+            alert("' . $msg . '");
+            location.href = "nuevo_cliente.php";
+        </script>';
 
     // Una vez que hicimos "echo" de la redirección con JS, detenemos
     // toda la ejecución de éste archivo php.

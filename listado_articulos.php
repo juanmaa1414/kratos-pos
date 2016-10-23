@@ -92,7 +92,7 @@ include "parte-superior.php";
             </tbody>
         </table>
     <?php else: ?>
-        <p>No se encontró ningún registro :(</p>
+        <br><br><center><p>No se encontró ningún registro :(</p></center>
     <?php endif; ?>
 </div>
 
