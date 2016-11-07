@@ -27,11 +27,17 @@
                 <li>
                     <a href="listado_proveedores.php">Proveedores</a>
                 </li>
-                <li><a href="">Altas</a>
+                <li><a href="">Archivos</a>
                         <ul>
                             <li><a href="nueva_provincia.php">Provincias</a></li>
                             <li><a href="nueva_localidad.php">Localidades</a></li>
+                            <li><a href="listado_flia_articulos.php">Familia de articulos</a></li>
                 		</ul>
+                </li>
+                <li><a href="listado_articulos.php">Articulos</a>
+                    <!--<ul>
+                        <li><a href="nuevo_producto.php">Nuevo Producto</a></li>
+                    </ul>-->
                 </li>
             </ul>
         </nav>

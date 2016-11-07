@@ -10,16 +10,16 @@ include "conexion_bd.php";
 if ($_POST) {
     // Guardamos valores de inputs con escape de caracteres raros y/o sospechosos.
     
-    $prov_nombre = $bd->real_escape_string($_POST["prov_nombre"]);
+    $fam_nombre = $bd->real_escape_string($_POST["fam_nombre"]);
     
-    $sql_prov = "INSERT INTO provincias (
-                    prov_nombre)
+    $sql_fam = "INSERT INTO familia_articulos (
+                    fam_nombre)
                 VALUES (
-                    '{$prov_nombre}'
+                    '{$fam_nombre}'
                     )";
 
-    $insert_prov = $bd->query($sql_prov);
-    if ( ! $insert_prov) {
+    $insert_fam = $bd->query($sql_fam);
+    if ( ! $insert_fam) {
         $msg = "Ocurrió un error al intentar guardar.";
     } else {
         $msg = "El registro fué completado con éxito.";
@@ -30,13 +30,12 @@ if ($_POST) {
     // navegador pueda preguntar si volver a enviar el formulario.
     echo '<script>
             alert("' . $msg . '");
-            location.href = "nueva_provincia.php";
-            </script>';
+            location.href = "nueva_flia_articulo.php";
+        </script>';
 
     // Una vez que hicimos "echo" de la redirección con JS, detenemos
     // toda la ejecución de éste archivo php.
     exit;
-
 }
 ?>
 <?php
@@ -47,11 +46,11 @@ include "parte-superior.php";
 ?>
 
 <div id="contenido">
-    <form id="" action="nueva_provincia.php" method="post">
-        <h2>Nueva Provincia</h2>
+    <form id="" action="nueva_flia_articulo.php" method="post">
+        <h2>Nueva Familia de Articulo</h2>
 
-        <label for="prov_nombre">Nombre Provincia:</label>
-        <input name="prov_nombre" id="prov_nombre" type="text">
+        <label for="fam_nombre">Familia articulo:</label>
+        <input name="fam_nombre" id="fam_nombre" type="text">
         <br><br>
         <input type="submit" name="formulario" value="Enviar">
        

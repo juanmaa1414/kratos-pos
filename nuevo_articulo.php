@@ -5,7 +5,7 @@ include "parte-superior.php";
 <div id="contenido">
     <form id="" action="" method="post">
         <h2>
-        Nuevo Producto
+        Nuevo Articulo
         </h2>
         <p>Nombre:
           <input name="descripcion" type="text" value="" maxlength="40">

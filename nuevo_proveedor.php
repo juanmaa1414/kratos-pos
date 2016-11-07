@@ -39,14 +39,14 @@ if ($_POST) {
 
     $insert_pro = $bd->query($sql_pro);
     if ( ! $insert_pro) {
-        $msg = "Ocurrió un error al intentar guardar: " . $bd->error;
+        $msg = "Ocurrió un error al intentar guardar.";
     } else {
         $msg = "El registro fué completado con éxito.";
     }
-    echo "<script>
-            alert('" . addslashes($msg) . "');
-            location.href = 'nuevo_proveedor.php';
-        </script>";
+    echo '<script>
+            alert("' . $msg . '");
+            location.href = "nuevo_proveedor.php";
+        </script>';
     exit;
 }
 
